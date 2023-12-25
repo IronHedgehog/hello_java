@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class ArlanHelper {
     //Test output
     public String drawQuad(int n) {
@@ -74,11 +76,12 @@ public class ArlanHelper {
 
     public String drawLine(int length) {
         String result = "";
+
         while (length > 0) {
 
             if (length % 2 == 0) {
                 result += "*";
-            }else {
+            } else {
                 result += "#";
             }
 
@@ -89,11 +92,31 @@ public class ArlanHelper {
 
     }
 
+    //    Напиши метод public String drawPattern(char[] pattern, int repeatCount),
+//    который принимает образец для отрисовки - pattern,
+//    и количество раз, которое нужно подряд нарисовать этот образец repeatCount.
+//    Метод возвращает строку с нарисованным указанное количество раз образцом.
+    public String drawPattern(char[] pattern, int repeatCount) {
+        String result = "";
+
+        int repeat = repeatCount;
+
+        while (repeat > 0) {
+            int i = 0;
+            while (i < pattern.length) {
+                result += pattern[i];
+                i++;
+            }
+            repeat--;
+        }
+        return result;
+    }
+
     public static void main(String[] args) {
         ArlanHelper helper = new ArlanHelper();
         //Should be:
         //**
         //**
-        System.out.println(helper.drawLine(5));
+        System.out.println(helper.drawPattern(new char[]{'J', 'a', 'v', 'a'}, 3));
     }
 }
