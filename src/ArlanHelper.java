@@ -5,11 +5,11 @@ public class ArlanHelper {
 
         int lines = n;
 
-        while(lines > 0) {
+        while (lines > 0) {
             lines--;
 
             int columns = n;
-            while(columns > 0) {
+            while (columns > 0) {
                 result += "*";
                 columns--;
             }
@@ -19,6 +19,7 @@ public class ArlanHelper {
 
         return result;
     }
+    //    Напиши метод public String drawQuad(int n), который рисует символами '*' квадрат со стороной n.
 //    public String drawQuad(int n) {
 //        String string = "";
 //        int counter = 0;
@@ -35,12 +36,44 @@ public class ArlanHelper {
 //        return "";
 //    }
 
-    //    Напиши метод public String drawQuad(int n), который рисует символами '*' квадрат со стороной n.
+
+//    Напиши метод public String drawRect(int width, int height, char c), который нарисует символом c прямогольник,
+//    у которого height строк, каждая строка имеет width символов.
+
+    public String drawRect(int width, int height, char c) {
+
+
+        String result = "";
+//        int cols = width;
+//        int rows = height;
+//        while (cols > 0){
+//             cols--;
+//
+//            while(rows > 0) {
+//                result += c;
+//                rows--;
+//            }
+//            result += "\n";
+//        }
+        int rows = height;
+
+        while (rows > 0) {
+            int cols = width;
+            while (cols > 0) {
+                result += c;
+                cols--;
+            }
+            result += "\n";
+            rows--;
+        }
+        return result;
+    }
+
     public static void main(String[] args) {
         ArlanHelper helper = new ArlanHelper();
         //Should be:
         //**
         //**
-        System.out.println(helper.drawQuad(20));
+        System.out.println(helper.drawRect(2, 3, 'X'));
     }
 }
