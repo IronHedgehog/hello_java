@@ -69,11 +69,31 @@ public class ArlanHelper {
         return result;
     }
 
+//    Напиши метод public String drawLine(int length).
+//    Он рисует линию длиной length символами '*' и '#' поочередно, начиная c символа '*' и возвращает эту линию
+
+    public String drawLine(int length) {
+        String result = "";
+        while (length > 0) {
+
+            if (length % 2 == 0) {
+                result += "*";
+            }else {
+                result += "#";
+            }
+
+            length--;
+        }
+
+        return result;
+
+    }
+
     public static void main(String[] args) {
         ArlanHelper helper = new ArlanHelper();
         //Should be:
         //**
         //**
-        System.out.println(helper.drawRect(2, 3, 'X'));
+        System.out.println(helper.drawLine(5));
     }
 }
