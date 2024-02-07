@@ -1,8 +1,8 @@
 package module5;
 
- class XFuelTanker extends Tanker {
+ class MX200Tanker extends Tanker {
      @Override
      protected String getFuelType() {
-         return "XFuel";
+         return "MX200";
      }
  }
