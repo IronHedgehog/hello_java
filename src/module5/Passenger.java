@@ -1,4 +1,7 @@
 package module5;
 
-public class Passenger {
+abstract class Passenger {
+    public abstract  String getType();
+
+    public abstract int getTicketPrice();
 }
