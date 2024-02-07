@@ -1,4 +1,13 @@
 package module5;
 
-public class RegularPassenger {
-}
+ class RegularPassenger extends Passenger {
+     @Override
+     public String getType() {
+         return "Regular";
+     }
+
+     @Override
+     public int getTicketPrice() {
+         return 199;
+     }
+ }
