@@ -1,6 +1,8 @@
 package module5;
 
- class Point {
+import java.util.Objects;
+
+class Point {
   private int x;
   private int y;
   private int z;
@@ -22,7 +24,12 @@ package module5;
    }
   }
 
-  public int getY() {
+ @Override
+ public int hashCode() {
+  return Objects.hash(x, y, z);
+ }
+
+ public int getY() {
    return y;
   }
 
