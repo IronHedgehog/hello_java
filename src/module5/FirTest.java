@@ -1,4 +1,4 @@
-
+package module5;
 
 class FirTest {
     public int test(FirNum firNum, int number) {
@@ -42,6 +42,7 @@ class FirNumFactorial extends FirNum {
         return result;
     }
 }
+
 class FirNumMultiplyOdd extends FirNum {
     @Override
     public int calc(int n) {
@@ -57,5 +58,18 @@ class FirNumMultiplyOdd extends FirNum {
             }
         }
         return sum;
+    }
+}
+
+class FirNumBasis extends FirNum {
+    @Override
+    public int calc(int n) {
+        int result = 0;
+        for (int i = 1; i <= n; i++) {
+            if (i % 2 == 0) {
+                result += i;
+            }
+        }
+        return result / 2;
     }
 }
