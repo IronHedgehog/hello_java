@@ -1,6 +1,6 @@
 package module6.RectangleArea;
 
- class RectangleArea {
+class RectangleArea {
     private int x1, y1; // Координати першої точки прямокутника
     private int x2, y2; // Координати протилежної точки прямокутника
 
