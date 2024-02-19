@@ -12,6 +12,17 @@ public class Level {
         this.point = point;
     }
 
+//    В нашем случае алгоритм хеширования очень простой.
+//    Для каждой точки мы умножаем координаты x и y, и складываем сумму всех этих умножений.
+//    Полученное число и будет хешем.
+    public int calculateLevelHash(){
+        int result =0;
+        for (Point value : point) {
+            result += value.x * value.y;
+        }
+        return result;
+    }
+
 
     @Override
     public String toString() {
